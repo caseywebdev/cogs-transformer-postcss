@@ -1,6 +1,6 @@
 import postcss from 'postcss';
 
-export default async ({ file, options: { options, plugins } }) => {
+export default async ({ file, options: { plugins, ...options } }) => {
   const { css } = await postcss(plugins).process(file.buffer, {
     ...options,
     from: file.path
