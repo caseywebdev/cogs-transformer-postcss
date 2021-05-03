@@ -6,7 +6,7 @@ export default {
     name: 'index.js',
     options: {
       plugins: [
-        tailwindcss({ purge: { enabled: true, content: ['test/**/*.html'] } }),
+        tailwindcss({ mode: 'jit', purge: ['test/**/*.html'] }),
         autoprefixer
       ]
     }
